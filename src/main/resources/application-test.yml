@@ -1,0 +1,12 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /
+
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://172.16.9.38:23306/zentao?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver

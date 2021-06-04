@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vincent.pmsdemo.mapper.ZtTaskMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.vincent.pmsdemo.entity.ZtTask">
+                    <id column="id" property="id" />
+                    <result column="parent" property="parent" />
+                    <result column="project" property="project" />
+                    <result column="module" property="module" />
+                    <result column="story" property="story" />
+                    <result column="storyVersion" property="storyversion" />
+                    <result column="fromBug" property="frombug" />
+                    <result column="feedback" property="feedback" />
+                    <result column="name" property="name" />
+                    <result column="type" property="type" />
+                    <result column="pri" property="pri" />
+                    <result column="estimate" property="estimate" />
+                    <result column="consumed" property="consumed" />
+                    <result column="left" property="left" />
+                    <result column="deadline" property="deadline" />
+                    <result column="status" property="status" />
+                    <result column="subStatus" property="substatus" />
+                    <result column="color" property="color" />
+                    <result column="mailto" property="mailto" />
+                    <result column="desc" property="desc" />
+                    <result column="openedBy" property="openedby" />
+                    <result column="openedDate" property="openeddate" />
+                    <result column="assignedTo" property="assignedto" />
+                    <result column="Team" property="team" />
+                    <result column="assignedDate" property="assigneddate" />
+                    <result column="estStarted" property="eststarted" />
+                    <result column="realStarted" property="realstarted" />
+                    <result column="finishedBy" property="finishedby" />
+                    <result column="finishedDate" property="finisheddate" />
+                    <result column="finishedList" property="finishedlist" />
+                    <result column="canceledBy" property="canceledby" />
+                    <result column="canceledDate" property="canceleddate" />
+                    <result column="closedBy" property="closedby" />
+                    <result column="closedDate" property="closeddate" />
+                    <result column="closedReason" property="closedreason" />
+                    <result column="lastEditedBy" property="lasteditedby" />
+                    <result column="lastEditedDate" property="lastediteddate" />
+                    <result column="deleted" property="deleted" />
+                    <result column="workingtimeBy" property="workingtimeby" />
+                    <result column="workingtimeDate" property="workingtimedate" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, parent, project, module, story, storyVersion, fromBug, feedback, name, type, pri, estimate, consumed, left, deadline, status, subStatus, color, mailto, desc, openedBy, openedDate, assignedTo, Team, assignedDate, estStarted, realStarted, finishedBy, finishedDate, finishedList, canceledBy, canceledDate, closedBy, closedDate, closedReason, lastEditedBy, lastEditedDate, deleted, workingtimeBy, workingtimeDate
+        </sql>
+
+</mapper>

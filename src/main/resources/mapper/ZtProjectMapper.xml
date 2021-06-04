@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vincent.pmsdemo.mapper.ZtProjectMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.vincent.pmsdemo.entity.ZtProject">
+                    <id column="id" property="id" />
+                    <result column="isCat" property="iscat" />
+                    <result column="catID" property="catid" />
+                    <result column="type" property="type" />
+                    <result column="parent" property="parent" />
+                    <result column="name" property="name" />
+                    <result column="code" property="code" />
+                    <result column="begin" property="begin" />
+                    <result column="end" property="end" />
+                    <result column="days" property="days" />
+                    <result column="status" property="status" />
+                    <result column="subStatus" property="substatus" />
+                    <result column="statge" property="statge" />
+                    <result column="pri" property="pri" />
+                    <result column="desc" property="desc" />
+                    <result column="openedBy" property="openedby" />
+                    <result column="openedDate" property="openeddate" />
+                    <result column="openedVersion" property="openedversion" />
+                    <result column="closedBy" property="closedby" />
+                    <result column="closedDate" property="closeddate" />
+                    <result column="canceledBy" property="canceledby" />
+                    <result column="canceledDate" property="canceleddate" />
+                    <result column="PO" property="po" />
+                    <result column="PM" property="pm" />
+                    <result column="QD" property="qd" />
+                    <result column="RD" property="rd" />
+                    <result column="team" property="team" />
+                    <result column="acl" property="acl" />
+                    <result column="whitelist" property="whitelist" />
+                    <result column="order" property="order" />
+                    <result column="deleted" property="deleted" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, isCat, catID, type, parent, name, code, begin, end, days, status, subStatus, statge, pri, desc, openedBy, openedDate, openedVersion, closedBy, closedDate, canceledBy, canceledDate, PO, PM, QD, RD, team, acl, whitelist, order, deleted
+        </sql>
+
+</mapper>

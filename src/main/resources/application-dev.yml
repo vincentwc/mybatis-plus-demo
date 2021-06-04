@@ -1,0 +1,29 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /
+
+
+spring:
+  datasource:
+    username: selectuser
+    password: lAHE5#oG^Jsh>#d%
+    url: jdbc:mysql://172.16.9.38:23306/zentao?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 0
+      # 删除后
+      logic-delete-value: 1
+
+
+

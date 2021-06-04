@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vincent.pmsdemo.mapper.ZtProductMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.vincent.pmsdemo.entity.ZtProduct">
+                    <id column="id" property="id" />
+                    <result column="name" property="name" />
+                    <result column="code" property="code" />
+                    <result column="line" property="line" />
+                    <result column="type" property="type" />
+                    <result column="status" property="status" />
+                    <result column="subStatus" property="substatus" />
+                    <result column="desc" property="desc" />
+                    <result column="PO" property="po" />
+                    <result column="QD" property="qd" />
+                    <result column="RD" property="rd" />
+                    <result column="feedback" property="feedback" />
+                    <result column="acl" property="acl" />
+                    <result column="whitelist" property="whitelist" />
+                    <result column="createdBy" property="createdby" />
+                    <result column="createdDate" property="createddate" />
+                    <result column="createdVersion" property="createdversion" />
+                    <result column="order" property="order" />
+                    <result column="deleted" property="deleted" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, name, code, line, type, status, subStatus, desc, PO, QD, RD, feedback, acl, whitelist, createdBy, createdDate, createdVersion, order, deleted
+        </sql>
+
+</mapper>

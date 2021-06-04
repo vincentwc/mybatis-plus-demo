@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vincent.pmsdemo.mapper.ZtTeamMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.vincent.pmsdemo.entity.ZtTeam">
+                    <id column="id" property="id" />
+                    <result column="root" property="root" />
+                    <result column="type" property="type" />
+                    <result column="account" property="account" />
+                    <result column="role" property="role" />
+                    <result column="limited" property="limited" />
+                    <result column="join" property="join" />
+                    <result column="days" property="days" />
+                    <result column="hours" property="hours" />
+                    <result column="estimate" property="estimate" />
+                    <result column="consumed" property="consumed" />
+                    <result column="left" property="left" />
+                    <result column="order" property="order" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, root, type, account, role, limited, join, days, hours, estimate, consumed, left, order
+        </sql>
+
+</mapper>

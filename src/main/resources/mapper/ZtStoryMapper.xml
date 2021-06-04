@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vincent.pmsdemo.mapper.ZtStoryMapper">
+
+        <!-- 通用查询映射结果 -->
+        <resultMap id="BaseResultMap" type="com.vincent.pmsdemo.entity.ZtStory">
+                    <id column="id" property="id" />
+                    <result column="product" property="product" />
+                    <result column="branch" property="branch" />
+                    <result column="module" property="module" />
+                    <result column="plan" property="plan" />
+                    <result column="source" property="source" />
+                    <result column="sourceNote" property="sourcenote" />
+                    <result column="fromBug" property="frombug" />
+                    <result column="feedback" property="feedback" />
+                    <result column="title" property="title" />
+                    <result column="keywords" property="keywords" />
+                    <result column="type" property="type" />
+                    <result column="pri" property="pri" />
+                    <result column="apri" property="apri" />
+                    <result column="estimate" property="estimate" />
+                    <result column="status" property="status" />
+                    <result column="subStatus" property="substatus" />
+                    <result column="color" property="color" />
+                    <result column="stage" property="stage" />
+                    <result column="stagedBy" property="stagedby" />
+                    <result column="mailto" property="mailto" />
+                    <result column="openedBy" property="openedby" />
+                    <result column="openedDate" property="openeddate" />
+                    <result column="assignedTo" property="assignedto" />
+                    <result column="assignedDate" property="assigneddate" />
+                    <result column="lastEditedBy" property="lasteditedby" />
+                    <result column="lastEditedDate" property="lastediteddate" />
+                    <result column="reviewedBy" property="reviewedby" />
+                    <result column="reviewedDate" property="revieweddate" />
+                    <result column="closedBy" property="closedby" />
+                    <result column="closedDate" property="closeddate" />
+                    <result column="closedReason" property="closedreason" />
+                    <result column="toBug" property="tobug" />
+                    <result column="childStories" property="childstories" />
+                    <result column="linkStories" property="linkstories" />
+                    <result column="duplicateStory" property="duplicatestory" />
+                    <result column="version" property="version" />
+                    <result column="deleted" property="deleted" />
+        </resultMap>
+
+        <!-- 通用查询结果列 -->
+        <sql id="Base_Column_List">
+            id, product, branch, module, plan, source, sourceNote, fromBug, feedback, title, keywords, type, pri, apri, estimate, status, subStatus, color, stage, stagedBy, mailto, openedBy, openedDate, assignedTo, assignedDate, lastEditedBy, lastEditedDate, reviewedBy, reviewedDate, closedBy, closedDate, closedReason, toBug, childStories, linkStories, duplicateStory, version, deleted
+        </sql>
+
+
+    <select id="getStoryByProductId" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select
+            id, product, branch, module, plan, source, sourceNote, fromBug, feedback, title, keywords, type, pri, apri, estimate, status, subStatus, color, stage, stagedBy, mailto, openedBy, openedDate, assignedTo, assignedDate, lastEditedBy, lastEditedDate, reviewedBy, reviewedDate, closedBy, closedDate, closedReason, toBug, childStories, linkStories, duplicateStory, version, deleted
+        from zt_story
+        where product = #{productId,jdbcType=INTEGER}
+    </select>
+
+</mapper>
