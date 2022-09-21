@@ -6,9 +6,9 @@ server:
 
 spring:
   datasource:
-    username: selectuser
-    password: lAHE5#oG^Jsh>#d%
-    url: jdbc:mysql://172.16.9.38:23306/zentao?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: mysql@Devspace!
+    url: jdbc:mysql://10.253.17.37:3306/demo?characterEncoding=utf8&useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis-plus:
