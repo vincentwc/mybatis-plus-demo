@@ -61,3 +61,59 @@ VALUES (2, 2);
 INSERT INTO `user_role`
 VALUES (3, 1);
 
+
+---- 分页查询
+/*==============================================================*/
+/* DBMS name:      MySQL 5.0                                    */
+/* Created on:     2022/3/17 16:21:35                           */
+/*==============================================================*/
+
+
+drop table if exists bus_order;
+
+drop table if exists bus_order_details;
+
+drop table if exists sys_user;
+
+/*==============================================================*/
+/* Table: bus_order                                             */
+/*==============================================================*/
+create table bus_order
+(
+    id                   int not null auto_increment comment '主键',
+    order_code           varchar(128) comment '订单编号',
+    user_id              int comment '用户id',
+    primary key (id)
+);
+
+/*==============================================================*/
+/* Table: bus_order_details                                     */
+/*==============================================================*/
+create table bus_order_details
+(
+    id                   int not null auto_increment comment '主键',
+    product_name         varchar(64) comment '商品名称',
+    product_spec         varchar(64) comment '商品规格',
+    product_price        decimal(8,2) comment '商品价格',
+    order_id             int comment '订单编号',
+    primary key (id)
+);
+
+/*==============================================================*/
+/* Table: sys_user                                              */
+/*==============================================================*/
+create table sys_user
+(
+    id                   int not null auto_increment comment '主键',
+    user_name            varchar(32) comment '用户名',
+    primary key (id)
+);
+
+alter table bus_order add constraint FK_order_reference_user_fk foreign key (user_id)
+    references sys_user (id) on delete restrict on update restrict;
+
+alter table bus_order_details add constraint FK_order_detail_reference_order_fk foreign key (order_id)
+    references bus_order (id) on delete restrict on update restrict;
+
+
+
